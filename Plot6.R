@@ -19,6 +19,6 @@ library(plyr)
 #plot with be a bar plot with a trend line
     png("plot6.png", width = 800, height = 800)
     g<-ggplot(Sum_emit, aes(year,Emissions))
-    p<-g+geom_bar(stat="identity")+facet_grid(city~.,scales="free")+geom_smooth(method="lm")+scale_x_continuous(breaks=c(2000,2004,2008))
+    p<-g+geom_bar(stat="identity")+facet_grid(city~.,scales="free")+geom_smooth(method="lm")+scale_x_continuous(breaks=c(1999,2002,2005,2008))+labs(title="Motor Vehicle Emissions Levels for Baltimore City and Los Angeles County")
     print(p)
     dev.off()
